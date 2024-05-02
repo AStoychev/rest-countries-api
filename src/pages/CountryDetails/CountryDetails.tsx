@@ -50,16 +50,13 @@ export default function CountryDetails({ isDark }: DetailsStyle) {
         <div className={isDark ? styles.detailsDark : styles.detailsLight}>
             <div className="container">
                 <div className={styles.detailsWrapper}>
-
                     <div className={styles.buttonWrapper}>
                         <BackButton isDark={isDark}/>
                     </div>
-
                     <div className={styles.information}>
                         <div className={styles.imageWrapper}>
                             <img src={country[0]?.flag} />
                         </div>
-
                         <div className={styles.countryDetails}>
                             <h2>{country[0]?.name}</h2>
                             <div className={styles.data}>
@@ -76,7 +73,6 @@ export default function CountryDetails({ isDark }: DetailsStyle) {
                                     <li>Languages: <span>{country[0]?.language?.join(', ')}.</span></li>
                                 </ul>
                             </div>
-
                             {country[0]?.borders ?
                                 <div className={styles.borders}>
                                     <p>Border Countries:</p>

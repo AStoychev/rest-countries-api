@@ -24,14 +24,12 @@ export default function FilterByRegion({ changeShow, dark }: DropdownProps) {
 
   return (
     <div className={styles.dropdown}>
-
       <div className={styles.dropdownWrapper}>
         <button onClick={() => setIsOpen(!isOpen)} className={dark ? styles.selectDark : styles.selectLight}>
           {selectedOption}
           <RiArrowDropDownLine />
         </button>
       </div>
-
       {isOpen && (
         <div className={dark ? styles.optionsWrapperDark : styles.optionsWrapperLight}>
           {menuItems.map((item, index) => (

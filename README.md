@@ -7,8 +7,6 @@ An application that presents information about the countries of the world.
 - Start command: npm install
 - Start command: npm run dev
 
-
-
 # Functionalities
 - Filter by region
 - Search engine

@@ -29,18 +29,17 @@ export default function Search({ changeShow, dark }: SearchProps) {
         <div className={dark ? styles.searchDark : styles.searchLight}>
             <GrSearch className={styles.searchIcon} onClick={handleClick} />
             <div className={styles.searchWrapper}>
-                <label htmlFor='search'>
-                    <input
-                        type='search'
-                        name='seacrh'
-                        id='search'
-                        className={dark ? styles.searchInputDark : styles.searchInputLight}
-                        placeholder='Search for a country...'
-                        value={country}
-                        onChange={handleChange}
-                        onKeyDown={handleEnterPress}
-                    />
-                </label>
+                <label htmlFor='search'></label>
+                <input
+                    type='search'
+                    name='seacrh'
+                    id='search'
+                    className={dark ? styles.searchInputDark : styles.searchInputLight}
+                    placeholder='Search for a country...'
+                    value={country}
+                    onChange={handleChange}
+                    onKeyDown={handleEnterPress}
+                />
             </div>
         </div>
     )

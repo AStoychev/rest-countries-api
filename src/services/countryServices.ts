@@ -53,7 +53,6 @@ export const countryServiceFactory = () => {
     async function getCountryByName(country: string) {
         try {
             const response = await axios.get(`https://restcountries.com/v3.1/name/${country}`);
-            // console.log(111111111, response.data)
             const data = [{
                 flag: response.data[0].flags.svg,
                 name: response.data[0].name.common,

@@ -10,7 +10,6 @@ export function checkForNativeName(nativeNames: NativeNames): string[] | undefin
     for (const key in nativeNames) {
         if (nativeNames[key].hasOwnProperty("common")) {
             allNativeName.push(nativeNames[key].common)
-            // return nativeNames[key].common;
         }
     }
     if(allNativeName.length) {

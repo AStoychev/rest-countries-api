@@ -6,10 +6,10 @@
     justify-content: center;
     padding: 10px 30px 10px 30px;
     gap: 5px;
-    border-radius: 5px;
+    border-radius: 4px;
     background-color: hsl(210, 21.8%, 21.6%);
     color: hsl(0, 0%, 100%);
-    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     cursor: pointer;
 }
 
@@ -21,9 +21,9 @@
     justify-content: center;
     padding: 10px 30px 10px 30px;
     gap: 5px;
-    border-radius: 5px;
+    border-radius: 4px;
     background-color:hsl(0, 0%, 100%);
     color: hsl(200, 15%, 8%);
-    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     cursor: pointer;
 }

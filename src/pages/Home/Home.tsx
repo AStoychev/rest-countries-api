@@ -90,5 +90,3 @@ export default function Home({ dark }: HomeStyle) {
         </div>
     )
 }
-
-// export default Home

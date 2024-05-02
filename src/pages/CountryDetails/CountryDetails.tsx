@@ -91,7 +91,6 @@ export default function CountryDetails({ isDark }: DetailsStyle) {
                                 </div>
                                 :
                                 ''}
-
                         </div>
                     </div>
                 </div>

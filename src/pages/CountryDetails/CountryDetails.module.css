@@ -25,6 +25,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 50px;
 }
 
 .detailsWrapper .information .imageWrapper {
@@ -32,29 +33,28 @@
 }
 
 .detailsWrapper .information .imageWrapper img {
-    width: 480px;
-    height: 300px;
+    width: 530px;
+    height: 380px;
 }
 
 .detailsWrapper .information .countryDetails {
     width: 50%;
     display: flex;
     flex-direction: column;
-    padding-top: 45px;
-    padding-bottom: 45px;
+    justify-content: space-evenly;
     font-size: 16px;
 }
 
 .detailsWrapper .information .countryDetails h2 {
     font-size: 28px;
     font-weight: 800;
-    padding-bottom: 35px;
 }
 
 .detailsWrapper .information .countryDetails .data {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-bottom: 35px;
 }
 
 .detailsWrapper .information .countryDetails .data ul li {
@@ -78,6 +78,7 @@
 
 .detailsWrapper .information .countryDetails div {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     gap: 20px;
 }
@@ -91,6 +92,7 @@
     }
 
     .detailsWrapper .information {
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -98,7 +100,6 @@
 
     .detailsWrapper .information .imageWrapper {
         width: 100%;
-        display: flex;
         margin: 0 auto;
     }
 
@@ -111,6 +112,11 @@
         width: 100%;
         display: flex;
         flex-direction: column;
+        padding-bottom: 60px;
+    }
+
+    .detailsWrapper .information .countryDetails h2 {
+        padding-bottom: 35px;
     }
 
     .detailsWrapper .information .countryDetails .data {
@@ -142,6 +148,30 @@
 
 @media (min-width: 768px) {}
 
-@media (min-width: 992px) {}
+@media (max-width: 992px) {
+    .detailsWrapper .buttonWrapper {
+        padding-top: 30px;
+        padding-bottom: 60px;
+    }
+
+    .detailsWrapper .information {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .detailsWrapper .information .imageWrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .detailsWrapper .information .countryDetails {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
 
 @media (min-width: 1200px) {}

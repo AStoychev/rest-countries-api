@@ -64,12 +64,10 @@ export default function Home({ dark }: HomeStyle) {
     return (
         <div className={dark ? styles.homeDark : styles.homeLight}>
             <div className="container">
-
                 <div className={styles.countriesSelector}>
                     <Search changeShow={changeShow} dark={dark} />
                     <FilterByRegion changeShow={changeShow} dark={dark} />
                 </div>
-                
                 {!data.length ?
                     <NotFound/>
                     :

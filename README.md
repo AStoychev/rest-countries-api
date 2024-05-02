@@ -4,8 +4,8 @@ An application that presents information about the countries of the world.
 
 # How to start
 - Clone the repo
-- Start command: npm install
-- Start command: npm run dev
+- Start command: `npm install`
+- Start command: `npm run dev`
 
 # Functionalities
 - Filter by region

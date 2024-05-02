@@ -11,6 +11,7 @@ An application that presents information about the countries of the world.
 - Filter by region
 - Search engine
 - Details for each country
+- Dark and Light mode theme
 
 
 The application starts on port 5173, if you use this port you can change it!

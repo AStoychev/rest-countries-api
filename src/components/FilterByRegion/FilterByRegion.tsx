@@ -18,12 +18,11 @@ export default function FilterByRegion({ changeShow, dark }: DropdownProps) {
     changeShow('region', selectedValue);
   };
 
-  console.log(dark)
-
   return (
     <div className={styles.dropdown}>
-      <select value={selectedOption} className={dark ? styles.selectDark : styles.selectLight} onChange={handleSelectChange}>
-        <option value="all">{FILTER_STRING}</option>
+      <select value={selectedOption} name={FILTER_STRING} className={dark ? styles.selectDark : styles.selectLight} onChange={handleSelectChange}>
+        {FILTER_STRING}
+        {/* <option value="all">{FILTER_STRING}</option> */}
         <option value='africa'>Africa</option>
         <option value='asia'>Asia</option>
         <option value='europe'>Europe</option>

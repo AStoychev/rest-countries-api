@@ -6,7 +6,7 @@
     cursor: pointer;
     border-radius: 4px;
     background-color: hsl(210, 21.8%, 21.6%);
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.402);
+    box-shadow: 2px 2px 2px rgba(45, 44, 44, 0.194);
 }
 
 .cardLight {
@@ -26,6 +26,7 @@
     flex-direction: column;
     width: 250px;
     font-size: 14px;
+    padding-bottom: 15px;
 }
 
 .cardWrapper .flagWrapper {

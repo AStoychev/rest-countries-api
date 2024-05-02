@@ -48,6 +48,13 @@ body::-webkit-scrollbar-thumb {
     border: 3px solid var(--scrollbarBG);
 }
 
+@media (max-width: 576px) {
+    .container {
+        width: 85%;
+        max-width: 576px;
+    }
+}
+
 @media (min-width: 1440px) {
     .container {
         width: 1200px;

@@ -19,7 +19,7 @@ function App() {
   return (
     <>
       <div>
-        <Header switchTheme={switchTheme} dark={isDark} />
+        <Header switchTheme={switchTheme} isDark={isDark} />
         <Routes>
           <Route path="/" element={<Home dark={isDark} />} />
           <Route path="/:country" element={<CountryDetails isDark={isDark} />} />

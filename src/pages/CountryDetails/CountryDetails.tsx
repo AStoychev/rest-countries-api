@@ -46,8 +46,6 @@ export default function CountryDetails({ isDark }: DetailsStyle) {
         }
     }, [thisCountry])
 
-    console.log(isDark)
-
     return (
         <div className={isDark ? styles.detailsDark : styles.detailsLight}>
             <div className="container">

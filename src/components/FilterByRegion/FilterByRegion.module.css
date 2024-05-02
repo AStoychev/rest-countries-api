@@ -33,3 +33,27 @@
 select::after {
     border: 3px solid red;
 }
+
+@media only screen and (max-width: 375px) {}
+
+@media (max-width: 576px) {
+    .dropdown {
+        width: 100%;
+        display: flex;
+    }
+
+    .dropdown .selectDark {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .dropdown .selectLight {}
+}
+
+@media (min-width: 576px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}

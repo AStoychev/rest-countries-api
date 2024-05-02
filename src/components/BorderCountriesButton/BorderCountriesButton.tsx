@@ -7,7 +7,7 @@ interface ButtonProps {
     isDark: boolean
 }
 
-export default function BorderCountriesButton({border, isDark}: ButtonProps) {
+export default function BorderCountriesButton({ border, isDark }: ButtonProps) {
     const navigate = useNavigate();
 
     const onBorderButtonClick = (neighbor: string) => {
@@ -16,7 +16,9 @@ export default function BorderCountriesButton({border, isDark}: ButtonProps) {
 
     return (
         <>
-            <button onClick={() => onBorderButtonClick(border)} className={isDark ? styles.buttonDark : styles.buttonLight}>{border}</button>
+            <div className={styles.buttonWrapper}>
+                <button onClick={() => onBorderButtonClick(border)} className={isDark ? styles.buttonDark : styles.buttonLight}>{border}</button>
+            </div>
         </>
     )
 }

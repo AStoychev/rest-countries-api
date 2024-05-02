@@ -5,6 +5,7 @@ import { countryServiceFactory } from '../../services/countryServices';
 import Card from '../../components/Card/Card';
 import FilterByRegion from '../../components/FilterByRegion/FilterByRegion';
 import Search from '../../components/Search/Search';
+import NotFound from '../../components/NotFound/NotFound';
 
 import styles from './Home.module.css';
 
@@ -21,7 +22,7 @@ interface HomeStyle {
     dark: boolean
 }
 
-export default function Home({dark}: HomeStyle) {
+export default function Home({ dark }: HomeStyle) {
     const [data, setData] = useState<Country[]>([]);
     const [show, setShow] = useState<string>('');
     const [currentCountries, setCurrentCoutries] = useState<string>('');
@@ -46,6 +47,7 @@ export default function Home({dark}: HomeStyle) {
                 .then(result => {
                     if (result !== undefined) {
                         setData(result)
+
                     }
                 })
         }
@@ -63,23 +65,27 @@ export default function Home({dark}: HomeStyle) {
         <div className={dark ? styles.homeDark : styles.homeLight}>
             <div className="container">
                 <div className={styles.countriesSelector}>
-                    <Search changeShow={changeShow} dark={dark}/>
-                    <FilterByRegion changeShow={changeShow} dark={dark}/>
+                    <Search changeShow={changeShow} dark={dark} />
+                    <FilterByRegion changeShow={changeShow} dark={dark} />
                 </div>
-                <div className={styles.countries}>
-                    {data && data.map(country => (
-                        <Card
-                            key={country.flag}
-                            flag={country.flag}
-                            name={country.name}
-                            population={country.population}
-                            region={country.region}
-                            capital={country.capital}
-                            cca3={country.cca3}
-                            dark={dark}
-                        />
-                    ))}
-                </div>
+                {!data.length ?
+                    <NotFound/>
+                    :
+                    <div className={styles.countries}>
+                        {data && data.map(country => (
+                            <Card
+                                key={country.flag}
+                                flag={country.flag}
+                                name={country.name}
+                                population={country.population}
+                                region={country.region}
+                                capital={country.capital}
+                                cca3={country.cca3}
+                                dark={dark}
+                            />
+                        ))}
+                    </div>
+                }
             </div>
         </div>
     )

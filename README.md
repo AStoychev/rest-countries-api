@@ -1,4 +1,4 @@
-# Rest Countries API
+# REST Countries API
 
 An application that presents information about the countries of the world.
 

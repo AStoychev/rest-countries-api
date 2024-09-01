@@ -17,6 +17,11 @@
     border-radius: 4px;
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+.buttonDark:hover {
+    background-color: hsla(210, 22%, 22%, 0.3);
 }
 
 .buttonLight {
@@ -33,4 +38,9 @@
     border-radius: 4px;
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+.buttonLight:hover {
+    background-color: hsla(0, 0%, 96%)
 }

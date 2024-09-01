@@ -15,10 +15,8 @@ export default function BorderCountriesButton({ border, isDark }: ButtonProps) {
     }
 
     return (
-        <>
-            <div className={styles.buttonWrapper}>
-                <button onClick={() => onBorderButtonClick(border)} className={isDark ? styles.buttonDark : styles.buttonLight}>{border}</button>
-            </div>
-        </>
+        <div className={styles.buttonWrapper}>
+            <button onClick={() => onBorderButtonClick(border)} className={isDark ? styles.buttonDark : styles.buttonLight}>{border}</button>
+        </div>
     )
 }

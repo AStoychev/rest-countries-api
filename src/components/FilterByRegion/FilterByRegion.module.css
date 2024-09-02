@@ -6,7 +6,7 @@
 .dropdownWrapper {
     display: flex;
     flex-direction: row;
-    
+    cursor: pointer;
 }
 
 .dropdown .selectDark {
@@ -24,6 +24,11 @@
     font-weight: 300;
     border: none;
     border-radius: 4px;
+    transition: 0.3s;
+}
+
+.dropdown .selectDark:hover {
+    background-color: hsla(210, 22%, 22%, 0.7);
 }
 
 .dropdown .selectLight {
@@ -79,4 +84,8 @@
     all: unset;
     padding: 5px 10px 5px 10px;
     cursor: pointer;
+}
+
+.dropdown .buttonOptions:hover {
+    background-color: hsla(211, 58%, 62%, 0.7);
 }

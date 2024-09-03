@@ -1,5 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 
+import { Tooltip } from '@mantine/core';
+
 import { addCommasToNumber } from '../../functions/addCommasToNumber';
 
 import styles from './Card.module.css';
@@ -11,7 +13,7 @@ interface CardCountryProps {
     region: string;
     capital: string;
     cca3: string;
-    dark : boolean
+    dark: boolean
 }
 
 export default function Card({ flag, name, population, region, capital, cca3, dark }: CardCountryProps) {
@@ -26,7 +28,9 @@ export default function Card({ flag, name, population, region, capital, cca3, da
         <div className={dark ? styles.cardDark : styles.cardLight} onClick={onCardClick}>
             <div className={styles.cardWrapper}>
                 <div className={styles.flagWrapper}>
-                    <img src={flag} alt={name} />
+                    <Tooltip label={name} position="top" withArrow color="lime">
+                        <img src={flag} alt={name} />
+                    </Tooltip>
                 </div>
                 <div className={styles.infoWrapper}>
                     <h4>{name}</h4>

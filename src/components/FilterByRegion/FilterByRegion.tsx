@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import { useClickOutside } from "@mantine/hooks";
 
 import { RiArrowDropDownLine } from "react-icons/ri";
@@ -15,7 +15,6 @@ export default function FilterByRegion({ changeShow, dark }: DropdownProps) {
     const [selectedOption, setSelectedOption] = useState<string>(FILTER_STRING);
 
     const dropdownRef = useClickOutside(() => setIsOpen(false));
-    // const dropdownRef = useRef<HTMLDivElement>(null);
 
     const handleSelectChange = (value: string) => {
         const selectedValue = value;
@@ -25,21 +24,6 @@ export default function FilterByRegion({ changeShow, dark }: DropdownProps) {
 
     const [isOpen, setIsOpen] = useState(false);
     const menuItems = ['Africa', 'America', 'Asia', 'Europe', 'Oceania'];
-
-    // const handleClickOutside = (event: MouseEvent) => {
-    //     const target = event.target as Node;
-
-    //     if (dropdownRef.current && !dropdownRef.current.contains(target)) {
-    //         setIsOpen(false);
-    //     }
-    // };
-
-    // useEffect(() => {
-    //     document.addEventListener('mousedown', handleClickOutside);
-    //     return () => {
-    //         document.removeEventListener('mousedown', handleClickOutside);
-    //     };
-    // }, []);
 
     return (
         <div className={styles.dropdown} ref={dropdownRef}>

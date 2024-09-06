@@ -25,9 +25,15 @@
     flex-direction: row;
     flex-wrap: wrap;
     text-align: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     padding-top: 45px;
+    padding-bottom: 45px;
     gap: 45px;
+}
+
+.paginationWrapper {
+    padding-bottom: 45px;
+    margin: 0 auto;
 }
 
 @media only screen and (max-width: 375px) {}

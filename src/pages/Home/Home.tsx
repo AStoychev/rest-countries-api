@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 
 import { countryServiceFactory } from '../../services/countryServices';
 
+import { Pagination } from '@mantine/core';
+
 import Card from '../../components/Card/Card';
 import FilterByRegion from '../../components/FilterByRegion/FilterByRegion';
 import Search from '../../components/Search/Search';
@@ -26,7 +28,16 @@ export default function Home({ dark }: HomeStyle) {
     const [data, setData] = useState<Country[]>([]);
     const [show, setShow] = useState<string>('');
     const [currentCountries, setCurrentCoutries] = useState<string>('');
+    const [currentPage, setCurrentPage] = useState(1);
+
     const getCountries = countryServiceFactory();
+
+    const itemsPerPage = 12;
+    const totalPages = Math.ceil(data.length / itemsPerPage);
+    const currentData = data.slice(
+        (currentPage - 1) * itemsPerPage,
+        currentPage * itemsPerPage
+    );
 
     const changeShow = (filterType: string, countries: string) => {
         setShow(filterType)
@@ -68,24 +79,33 @@ export default function Home({ dark }: HomeStyle) {
                     <Search changeShow={changeShow} dark={dark} />
                     <FilterByRegion changeShow={changeShow} dark={dark} />
                 </div>
-                {!data.length ?
-                    <NotFound/>
-                    :
-                    <div className={styles.countries}>
-                        {data && data.map(country => (
-                            <Card
-                                key={country.flag}
-                                flag={country.flag}
-                                name={country.name}
-                                population={country.population}
-                                region={country.region}
-                                capital={country.capital}
-                                cca3={country.cca3}
-                                dark={dark}
+                {!data.length ? (
+                    <NotFound />
+                ) : (
+                    <>
+                        <div className={styles.countries}>
+                            {currentData && currentData.map(country => (
+                                <Card
+                                    key={country.flag}
+                                    flag={country.flag}
+                                    name={country.name}
+                                    population={country.population}
+                                    region={country.region}
+                                    capital={country.capital}
+                                    cca3={country.cca3}
+                                    dark={dark}
+                                />
+                            ))}
+                        </div>
+                        <div className={styles.paginationWrapper}>
+                            <Pagination
+                                value={currentPage}
+                                onChange={setCurrentPage}
+                                total={totalPages}
                             />
-                        ))}
-                    </div>
-                }
+                        </div>
+                    </>
+                )}
             </div>
         </div>
     )

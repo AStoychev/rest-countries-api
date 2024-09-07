@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
-
 import { countryServiceFactory } from '../../services/countryServices';
-
 import { Pagination } from '@mantine/core';
 
 import Card from '../../components/Card/Card';

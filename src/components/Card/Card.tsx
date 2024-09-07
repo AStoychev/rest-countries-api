@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom';
-
 import { Tooltip } from '@mantine/core';
 
 import { addCommasToNumber } from '../../functions/addCommasToNumber';
